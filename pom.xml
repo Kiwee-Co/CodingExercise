@@ -25,6 +25,9 @@
 		<maven-source.version>3.3.0</maven-source.version>
 		<maven-dependency-plugin.version>3.6.0</maven-dependency-plugin.version>
 
+		<!-- testing -->
+		<junit.version>5.9.3</junit.version>
+
 		<native.maven.plugin.version>0.9.23</native.maven.plugin.version>
 	</properties>
 
@@ -48,6 +51,20 @@
 				<artifactId>picocli</artifactId>
 				<version>${pico-cli.version}</version>
 			</dependency>
+
+			<dependency>
+				<groupId>org.junit.jupiter</groupId>
+				<artifactId>junit-jupiter-api</artifactId>
+				<version>${junit.version}</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.junit.jupiter</groupId>
+				<artifactId>junit-jupiter-engine</artifactId>
+				<version>${junit.version}</version>
+				<scope>test</scope>
+			</dependency>
+
 		</dependencies>
 	</dependencyManagement>
 
@@ -115,6 +132,18 @@
 	</build>
 
 	<modules>
-		<module>final-project</module>
+		<module>01.Introduction</module>
+		<module>02.Types</module>
+		<module>03.Conditional</module>
+		<module>04.Loops</module>
+		<module>05.Arrays</module>
+		<module>06.Methods</module>
+		<module>07.Review</module>
+		<module>08.OOP</module>
+		<module>09.Maven</module>
+		<module>10.Git</module>
+		<module>11.MoreOOP</module>
+		<module>12.Debugging</module>
+		<module>13.FinalProject</module>
 	</modules>
 </project>
