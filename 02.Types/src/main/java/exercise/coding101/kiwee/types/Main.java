@@ -4,7 +4,6 @@ public class Main {
 
     public static void main(String[] args) {
         declareAndAssign();
-
     }
 
     static void declareAndAssign() {
@@ -35,6 +34,15 @@ public class Main {
 
         // Assign a value to the name variable
         name = "John Doe";
+
+        // s formats strings.
+        // d formats decimal integers.
+        // f formats floating-point numbers.
+
+        System.out.printf("age:     %s %d \n", age, age);
+        System.out.printf("price:   %s %f \n", price, price);
+        System.out.printf("isTrue:  %s\n", isTrue);
+        System.out.printf("name:    %s\n", name);
     }
 
     static double getPI() {
