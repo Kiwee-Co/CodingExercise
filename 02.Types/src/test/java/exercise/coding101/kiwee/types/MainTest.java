@@ -61,4 +61,10 @@ public class MainTest {
         assertFalse(isLessThanOrEqual);
     }
 
+    @Test
+    public void testDoublePrecision() {
+        assertEquals(0.1, Main.difference(0.9, 0.8));
+        assertEquals(0.1, Main.difference(1.0, 0.9));
+    }
+
 }

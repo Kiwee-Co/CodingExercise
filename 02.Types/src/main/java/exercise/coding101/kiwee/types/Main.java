@@ -43,11 +43,39 @@ public class Main {
         System.out.printf("price:   %s %f \n", price, price);
         System.out.printf("isTrue:  %s\n", isTrue);
         System.out.printf("name:    %s\n", name);
+
+        doublePrecision();
+
+        overflow();
+    }
+
+    // IEEE 754: https://en.wikipedia.org/wiki/IEEE_754
+    private static void doublePrecision() {
+        System.out.printf("double precision error: %s\n", difference(1.0, 0.9));
+
+        System.out.println("doubles: ");
+        System.out.println(0.1 + 0.2);
+        System.out.println(1.1 + 1.2);
+        System.out.println(0.1f + 0.2f);
+
+    }
+
+    private static void overflow() {
+        System.out.println("overflow: ");
+        System.out.printf("max +1: %s", maxValue());
+    }
+
+    static int maxValue() {
+        return Integer.MAX_VALUE + 1;
     }
 
     static double getPI() {
         double pi = Math.PI;
         return 1234.56;
+    }
+
+    static double difference(double a, double b) {
+        return a - b;
     }
 
     static double difference(double a, int b) {
