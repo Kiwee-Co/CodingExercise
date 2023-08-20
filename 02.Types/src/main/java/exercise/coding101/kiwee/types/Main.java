@@ -70,8 +70,7 @@ public class Main {
     }
 
     static double getPI() {
-        double pi = Math.PI;
-        return 1234.56;
+        return Math.PI;
     }
 
     static double difference(double a, double b) {
@@ -83,6 +82,6 @@ public class Main {
     }
 
     static boolean isPI(double pi) {
-        return false;
+        return pi == Math.PI;
     }
 }

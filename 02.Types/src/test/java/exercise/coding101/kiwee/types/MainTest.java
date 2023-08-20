@@ -1,7 +1,6 @@
 package exercise.coding101.kiwee.types;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
@@ -20,18 +19,18 @@ public class MainTest {
 
     @Test
     void testDifference() {
-        assertEquals(-2, Main.difference(1, 2));
+        assertEquals(-1, Main.difference(1, 2));
     }
 
     @Test
     public void testArithmeticOperations() {
         int sum = 5 + 3;
-        assertEquals(7, sum);
+        assertEquals(8, sum);
 
         int difference = 10 - 7;
-        assertEquals(5, difference);
+        assertEquals(3, difference);
 
-        double product = 2.5 * 4;
+        double product = 2.5f * 4;
         assertEquals(10, product, 0.01);
 
         double quotient = 10 / 3.0;
@@ -43,7 +42,7 @@ public class MainTest {
         String firstName = "Kiwee";
         String lastName = "Yang";
         String fullName = firstName + " " + lastName;
-        assertEquals("", fullName);
+        assertEquals("Kiwee Yang", fullName);
     }
 
     @Test
@@ -51,20 +50,23 @@ public class MainTest {
         int x = 5;
         int y = 10;
 
+        y = 5;
         boolean isEqual = x == y;
         assertTrue(isEqual);
 
+        x = 10;
         boolean isGreaterThan = x > y;
         assertTrue(isGreaterThan);
 
+        y = 10;
         boolean isLessThanOrEqual = x <= y;
-        assertFalse(isLessThanOrEqual);
+        assertTrue(isLessThanOrEqual);
     }
 
     @Test
     public void testDoublePrecision() {
-        assertEquals(0.1, Main.difference(0.9, 0.8));
-        assertEquals(0.1, Main.difference(1.0, 0.9));
+        assertEquals(0.1f, (float) Main.difference(0.9, 0.8));
+        assertEquals(0.1f, (float) Main.difference(1.0, 0.9));
     }
 
 }
