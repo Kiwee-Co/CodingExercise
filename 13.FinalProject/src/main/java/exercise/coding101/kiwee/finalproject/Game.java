@@ -18,7 +18,12 @@ public abstract class Game {
         players = new Player[2];
 
         for (int i = 0; i < 2; i++) {
-            System.out.println("What's your name?");
+            if (i == 0) {
+                System.out.println("What's first player's name?");
+            } else {
+                System.out.println("What's second player's name?");
+            }
+
             name = scan.next();
 
             System.out.printf("Hello %s , welcome to the game! \n", name);
