@@ -48,10 +48,12 @@ public abstract class Game {
             // if current player is players[0], switch to players[1], false otherwise.
             currentPlayer = currentPlayer == players[0] ? players[1] : players[0];
         }
+
+        System.out.println("Congrats! " + winner.getName() + " just won the game " + name);
     }
 
     /*
-     * return true if the player wins the game
+     * it's player's term to make a move; return true if the player wins the game
      */
     protected abstract boolean term(Player player);
 }

@@ -1,4 +1,4 @@
-package exercise.coding101.kiwee.finalproject.GuessNumber;
+package exercise.coding101.kiwee.finalproject.guessnumber;
 
 import java.util.Scanner;
 
@@ -25,10 +25,15 @@ public class GuessNumber extends Game {
 
     @Override
     protected boolean term(Player player) {
-
         return false;
     }
 
+    /**
+     * This is for user to set the number without revealing on screen; you don't
+     * need to touch the following code.
+     * 
+     * @param player
+     */
     private void setNumber(Player player) {
         String passwd = null;
 
@@ -49,6 +54,7 @@ public class GuessNumber extends Game {
             }
         }
 
+        // now each user has this property called "SECRET" with password
         player.SetProperty(SECRET, passwd);
 
         System.out.println(player.getName() + " has setup the answer key.");

@@ -7,8 +7,8 @@ import java.util.concurrent.Callable;
 import org.apache.commons.lang3.StringUtils;
 
 import exercise.coding101.kiwee.finalproject.Game;
-import exercise.coding101.kiwee.finalproject.Get30.GetThirty;
-import exercise.coding101.kiwee.finalproject.GuessNumber.GuessNumber;
+import exercise.coding101.kiwee.finalproject.get30.GetThirty;
+import exercise.coding101.kiwee.finalproject.guessnumber.GuessNumber;
 import picocli.CommandLine;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;

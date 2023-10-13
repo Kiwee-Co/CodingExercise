@@ -1,4 +1,4 @@
-package exercise.coding101.kiwee.finalproject.Get30;
+package exercise.coding101.kiwee.finalproject.get30;
 
 import java.util.Scanner;
 
