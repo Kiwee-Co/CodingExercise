@@ -37,10 +37,9 @@ public class GuessNumber extends Game {
     private void setNumber(Player player) {
         String passwd = null;
 
-        while (!StringUtils.isNumeric(passwd) || StringUtils.length(passwd) != SECRET_LENGTH) {
+        while (!StringUtils.isNumeric(passwd) || StringUtils.length(passwd) != SECRET_LENGTH || containsDuplicate(passwd)) {
             // check if this is in IDE
             if (System.console() == null) {
-
                 final JPasswordField pf = new JPasswordField();
                 passwd = JOptionPane.showConfirmDialog(null, pf, player.getName() + ", " + MESG, JOptionPane.OK_CANCEL_OPTION,
                         JOptionPane.QUESTION_MESSAGE) == JOptionPane.OK_OPTION ? new String(pf.getPassword()) : "";
@@ -60,4 +59,22 @@ public class GuessNumber extends Game {
         System.out.println(player.getName() + " has setup the answer key.");
     }
 
+    static boolean containsDuplicate(String input) {
+        if (StringUtils.isBlank(input)) {
+            return false;
+        }
+
+        boolean[] charSet = new boolean[10];
+
+        for (int i = 0; i < input.length(); i++) {
+            int val = input.charAt(i) - '0';
+
+            if (charSet[val]) {
+                return true;
+            }
+            charSet[val] = true;
+        }
+
+        return false;
+    }
 }
